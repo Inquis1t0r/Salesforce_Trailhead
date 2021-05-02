@@ -1,6 +1,6 @@
 <apex:page sidebar="false">
 <!--Flight Systems Checklist Visualforce Page-->
-   <h1>Checklist</h1>
+   <h1>Station Status</h1>
    <apex:form id="engineReadinessChecklist">
       <apex:pageBlock title="Flight Systems Checklist">
          <!--First Section-->
