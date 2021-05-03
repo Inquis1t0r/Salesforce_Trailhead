@@ -1,6 +1,5 @@
 List<List<sObject>> searchList = [FIND 'Crisis' IN ALL FIELDS 
-                                  RETURNING Contact(FirstName, LastName,
-                                  Phone, Email, Description)];
+                                  RETURNING Contact(FirstName, LastName)];
 Contact[] searchContacts = (Contact[])searchList[0];
 System.debug('Found the following contacts:');
 for (Contact c : searchContacts) {
