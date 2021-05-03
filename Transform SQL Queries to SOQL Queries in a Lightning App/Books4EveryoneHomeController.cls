@@ -4,4 +4,10 @@ public with sharing class Books4EveryoneHomeController {
     return [SELECT Id,Name,Description__c
   FROM Book__c];
   }
+    
+    @AuraEnabled
+  public static List<Book__c> getBooksAndAuthor(){
+    return; //Your Query here!
+  }
+    
 }
