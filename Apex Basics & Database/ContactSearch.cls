@@ -1,7 +1,7 @@
 public class ContactSearch {
-    public static Contact searchForContacts(String Name, String MailingPostalCode){
-        Contact[] cts = [SELECT Account.Name, Account.MailingPostalCode FROM Contact];
-		Contact searchedContact = cts[0];
+    public static List<Contact> searchForContacts(String Name, String MailingPostalCode){
+        Contact[] cts = [SELECT Account.Name, Account.MailingPostalCode FROM Contact
+                        WHERE FirstName = Name AND MailingPostalCode= MailingPostalCode];
         return searchedContact;
     }
 }
