@@ -1,6 +1,6 @@
 public class StringArrayTest {
     public static String[] generateStringArray(){
-        String[] myArray = new List<String>();
+        List<String> ints = new String[numberOfStrings];
         return myArray;
     }
 }
