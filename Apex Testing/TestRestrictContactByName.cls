@@ -6,4 +6,6 @@ public class TestRestrictContactByName {
     Test.startTest();
     Database.DeleteResult result = Database.delete(cct, false);
     Test.stopTest();
+
+    System.assertEquals(!result.isSuccess());
 }
