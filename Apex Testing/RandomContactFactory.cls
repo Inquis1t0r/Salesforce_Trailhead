@@ -3,7 +3,7 @@ public class RandomContactFactory {
         List<Contact> newCts = new List<Contact>();
         
         for(Integer i=0;i<numCts;i++) {
-            Contact a = new Contact(name = "Name" + i, LastName='newCtsLastName');
+            Contact a = new Contact(FirstName = 'Name' + i, LastName='newCtsLastName');
             newCts.add(a);
         }
         insert newCts;
