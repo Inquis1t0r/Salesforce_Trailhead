@@ -10,6 +10,6 @@ public class TestRestrictContactByName {
         Database.SaveResult result = Database.insert(ctt, false);
         Test.stopTest();
     
-        System.assertEquals(!result.isSuccess());
+        System.assert(!result.isSuccess());
     }
 }
