@@ -7,7 +7,7 @@ public class TestRestrictContactByName {
         insert ctt;
     
         Test.startTest();
-        Database.DeleteResult result = Database.delete(ctt, false);
+        Database.SaveResult result = Database.insert(ctt, false);
         Test.stopTest();
     
         System.assertEquals(!result.isSuccess());
