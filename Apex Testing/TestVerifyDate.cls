@@ -15,7 +15,7 @@ public class TestVerifyDate {
         Date testDate1 = date.newInstance(1992, 04, 14);
         Date testDate2 = date.newInstance(2021, 05, 04);
         Date result = VerifyDate.CheckDates(testDate1, testDate2);
-        Date expectedDate = date.newInstance(2021, 05, 31);
+        Date expectedDate = date.newInstance(1992, 05, 31);
         
         System.assertEquals(expectedDate, result);
     }
