@@ -1,11 +1,15 @@
 @isTest
 public class TestRestrictContactByName {
-    Contact ctt = new Contact(LastName='INVALIDNAME');
-    insert cct;
-
-    Test.startTest();
-    Database.DeleteResult result = Database.delete(cct, false);
-    Test.stopTest();
-
-    System.assertEquals(!result.isSuccess());
+    
+    @isTest
+    public static void testRestrictContactByNameTrigger(){
+        Contact ctt = new Contact(LastName='INVALIDNAME');
+        insert ctt;
+    
+        Test.startTest();
+        Database.DeleteResult result = Database.delete(ctt, false);
+        Test.stopTest();
+    
+        System.assertEquals(!result.isSuccess());
+    }
 }
