@@ -1,7 +1,7 @@
 public class RandomContactFactory {
-    public static List<Contact>generateRandomContacts(){
-        List<Contact> myList = new List<Contact>();
+    public static List<Contact>generateRandomContacts(Integer numCts, String newCtsLastName){
+        List<Contact> newCts = new List<Contact>();
         
-        return myList;
+        return newCts;
     }
 }
