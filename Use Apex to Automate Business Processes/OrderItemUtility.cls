@@ -41,7 +41,7 @@ public class OrderItemUtility {
                         } //end if
                 } //end for loop
             //TO DO 3.2: Use DML to add the new list of newBouquets
-  
+                insert newBouquets;
         //TO DO 3.3: Close the if section
   
     } //end method
