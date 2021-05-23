@@ -2,7 +2,7 @@
 private class LeadProcessorTest {
 
     @testSetup
-    static void createLeads() {
+    static void createTestLeads() {
 		Integer numOfTestLeads = 200;
 		
         List<Lead> testLeads = new List<Lead>();
@@ -16,7 +16,8 @@ private class LeadProcessorTest {
         insert testLeads;
     }
 
-    static TestMethod void myTest() {
+    static TestMethod void leadsTest() {
+	Integer numOfTestLeads = 200;
         Test.startTest();
         LeadProcessor lp = new LeadProcessor();
         Id batchId = Database.executeBatch(lp);
