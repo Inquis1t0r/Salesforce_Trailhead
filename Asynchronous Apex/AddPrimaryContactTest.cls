@@ -17,6 +17,7 @@ private class AddPrimaryContactTest {
         insert newAccounts;
     }
 
+    @isTest
     static void accountTest() {
 		Integer numOfTestAccs = 50;
         Contact contactObj = new Contact(
