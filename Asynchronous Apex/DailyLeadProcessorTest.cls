@@ -14,7 +14,6 @@ private class DailyLeadProcessorTest {
         insert testLeads;
     }
 	
-	@isTest
     static TestMethod void leadsTest() {
         String jobName = 'Daily Lead Processor - Test';
         String CRON_EXP = '0 0 0 15 3 ? 2021'; 
