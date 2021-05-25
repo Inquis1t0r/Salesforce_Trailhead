@@ -1,0 +1,3 @@
+trigger BearAlertTopicAssignmentTrigger on TopicAssignment (before insert) {
+
+}
