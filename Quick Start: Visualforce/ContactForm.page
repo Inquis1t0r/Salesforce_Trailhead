@@ -1,6 +1,9 @@
 <apex:page >
-         <head>
-         </head>
-         <body>
-         </body>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Quick Start: Visualforce</title>
+    <!-- Import the Design System style sheet -->
+    <apex:slds />
+    <body>
+    </body>
 </apex:page>
