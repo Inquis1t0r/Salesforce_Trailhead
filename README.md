@@ -1,2 +1,2 @@
 # Salesforce_Trailhead
-My solutions for Salesforce Trailhead challenges
+My solutions for Salesforce Trailhead challenges.
