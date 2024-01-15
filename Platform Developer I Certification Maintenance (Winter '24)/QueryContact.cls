@@ -12,6 +12,13 @@ public class QueryContact {
   public static Id getContactIDWithBinds(Map<String, Object> bindVars) {
     //do not modify any code above this line
     //implement the logic that will use bindVars to retrieve the contact's ID
-    return null;
+  String queryString =
+        'SELECT ID FROM Contact WHERE lastName = :lastName AND title = :title LIMIT 1';
+        List<Contact> Contacts = Database.queryWithBinds(
+            queryString,
+            bindVars,
+            AccessLevel.USER_MODE
+        );
+      return Contacts[0].Id;
     }
 }
