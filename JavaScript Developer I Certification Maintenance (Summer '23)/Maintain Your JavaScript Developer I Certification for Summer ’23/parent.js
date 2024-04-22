@@ -21,7 +21,8 @@ account;
             return getFieldValue(this.account.data, FIELD_OWNER_NAME);
 }
       sayHi() {
-            let cmp = this.template.querySelector("c-child");
+            //let cmp = this.template.querySelector("c-child");
+            let cmp = this.refs.child;
             cmp.sayHi();
      }
 }
