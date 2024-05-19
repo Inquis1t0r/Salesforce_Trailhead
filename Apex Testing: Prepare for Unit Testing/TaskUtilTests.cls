@@ -15,5 +15,17 @@ public class TaskUtilTests {
         //THEN
         Assert.areEqual(NORMAL_PRIORITY, currentPriority, 'Task priority is set to: ' + NORMAL_PRIORITY);
     }
+    
+    @isTest
+    static void testGetTaskPriorityHigh(){ //shouldReturnTaskPriorityHigh
+        //GIVEN
+        String testLeadState = 'CA';
+        
+        //WHEN
+        String currentPriority = TaskUtil.getTaskPriority(testLeadState);
+        
+        //THEN
+        Assert.areEqual(HIGH_PRIORITY, currentPriority, 'Task priority is set to: ' + HIGH_PRIORITY);
+    }
 
 }
