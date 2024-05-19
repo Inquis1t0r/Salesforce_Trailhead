@@ -27,5 +27,17 @@ public class TaskUtilTests {
         //THEN
         Assert.areEqual(HIGH_PRIORITY, currentPriority, 'Task priority is set to: ' + HIGH_PRIORITY);
     }
+    
+    @isTest
+    static void shouldReturnNullForEmptyLeadstate(){
+        //GIVEN
+        String testLeadState = '';
+        
+        //WHEN
+        String currentPriority = TaskUtil.getTaskPriority(testLeadState);
+        
+        //THEN
+        Assert.areEqual(null, currentPriority, 'Null returned for empty Lead State');
+    }
 
 }
