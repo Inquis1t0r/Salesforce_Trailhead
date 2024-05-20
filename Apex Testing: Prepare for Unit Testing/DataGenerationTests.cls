@@ -40,4 +40,14 @@ private class DataGenerationTests {
     Assert.areEqual(5, contacts.size(), 'Was expecting to find 5 contacts');
   }
 
+  @IsTest
+  static void testAtTestSetupMethodsRule() {
+    // WHEN
+    Test.startTest();
+      List<Opportunity> opps = [SELECT Id, AccountId FROM Opportunity];
+    Test.stopTest();
+    // THEN
+    Assert.areEqual(1, opps.size(), 'Expected test to find a single Opp');
+  }
+
 }
