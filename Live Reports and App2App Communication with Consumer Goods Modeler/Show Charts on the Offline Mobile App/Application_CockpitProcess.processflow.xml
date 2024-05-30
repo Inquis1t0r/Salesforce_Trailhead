@@ -4,3 +4,20 @@
 <Declaration name="CardDisplayReport_CompetitorRate" type="DomDecimal" />
 <!-- Card: DisplayReport -->
 <Event name="CardDisplayReport_loadData" action="CardDisplayReport_loadData" />
+<!-- Card: Display Reports START-->
+<Action name="CardDisplayReport_loadData" actionType="LOAD" type="LoMyDisplays" >
+  <Return name="ProcessContext::CardDisplayReport_DisplayList" />
+  <TransitionTo action="CardDisplayReport_getCompetitorRate"/>
+</Action>
+<Action name="CardDisplayReport_getCompetitorRate" actionType="LOGIC" call="ProcessContext::CardDisplayReport_DisplayList.myGetCompetitorRate">
+  <Parameters/>
+  <Return name="ProcessContext::CardDisplayReport_CompetitorRate" />
+  <TransitionTo action="CardDisplayReport_setDataLoaded"/>
+</Action>
+<Action name="CardDisplayReport_setDataLoaded" actionType="LOGIC" call="Utils.identity">
+  <Parameters>
+    <Input name="value" value="1" type="Literal" />
+  </Parameters>
+  <Return name="ProcessContext::CardDisplayReport_DataLoaded" />
+</Action>
+<!-- Card: Display Reports END-->
