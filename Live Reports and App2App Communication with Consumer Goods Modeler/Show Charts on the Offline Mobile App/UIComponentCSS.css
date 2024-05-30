@@ -1,0 +1,6 @@
+<UIComponentCSS name="UIComponentCSS"><![CDATA[
+ /* overall wrapper class to remove scroll-bar */
+ .WrappingContainer {
+overflow: hidden;
+}
+   ]]></UIComponentCSS>
