@@ -1,0 +1,4 @@
+<!-- Call the NavigateTo Function if the button is pressed-->
+<Action name="NavigateTo" actionType="LOGIC" call="ProcessContext::CurrentDisplay.MyNavigateTo">
+  <TransitionTo action="ShowDisplayDetails" />
+</Action>
