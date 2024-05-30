@@ -1,0 +1,18 @@
+<!-- Reporting Card START -->
+<CardContainer name="CardDisplayReport">
+  <Bindings>
+    <Resource target="Title" type="Label" id="ReportingDislpayCardTitle" defaultLabel="Displays" />
+    <Resource target="Information" type="Label" id="ReportingDisplayCardInformation" defaultLabel="Competitor Rate" />
+    <Binding target="IsReadyToLoad" type="Text" binding="ProcessContext::CardDisplayReport_DataLoaded" bindingMode="ONE_WAY" />
+  </Bindings>
+  <VisibilityRoles allRoles="true" />
+  <Events>
+    <LoadContainerData event="CardDisplayReport_loadData" />
+  </Events>
+  <UIPluginV2 name="MyCardDisplayReportUiPluginV2" uiPlugin="MyCardDisplayReportUiPluginV2">
+    <Bindings>
+      <Binding target="competitorRate" type="Text" binding="ProcessContext::CardDisplayReport_CompetitorRate" bindingMode="ONE_WAY" />
+    </Bindings>
+  </UIPluginV2>
+</CardContainer>
+<!-- Reporting Card END -->
