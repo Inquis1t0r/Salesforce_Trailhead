@@ -1,0 +1,11 @@
+<Merger name="CustomerMerger" pattern="oneInputControlTwoButtonsMax" leftRatio="80" rightRatio="20" >
+  <Lookup name="Customer">
+    <Bindings>
+      <Resource target="Label" type="Label" id="CustomerId" defaultLabel="Customer" />
+      <Binding target="Value" binding="ProcessContext::CurrentDisplay.luCustomer.name" bindingMode="TWO_WAY" />
+    </Bindings>
+    <Events>
+      <LookupEvent event="CustomerLookup" />
+    </Events>
+  </Lookup>
+</Merger>
