@@ -1,0 +1,10 @@
+<Interface>
+  <Property id="competitorRate" />
+</Interface>
+<Labels>
+  <Label id="CardReportingCompetitorRate_Title" />
+</Labels>
+<Libraries>
+  <Library name="C3JS" />
+  <Library name="D3JS" />
+</Libraries
