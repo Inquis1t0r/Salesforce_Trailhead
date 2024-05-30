@@ -1,0 +1,4 @@
+<!-- Card DisplayReport -->
+<Declaration name="CardDisplayReport_DisplayList" type="LoMyDisplays"/>
+<Declaration name="CardDisplayReport_DataLoaded" type="DomBool"/>
+<Declaration name="CardDisplayReport_CompetitorRate" type="DomDecimal" />
