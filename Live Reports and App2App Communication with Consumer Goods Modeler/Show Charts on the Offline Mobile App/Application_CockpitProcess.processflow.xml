@@ -2,3 +2,5 @@
 <Declaration name="CardDisplayReport_DisplayList" type="LoMyDisplays"/>
 <Declaration name="CardDisplayReport_DataLoaded" type="DomBool"/>
 <Declaration name="CardDisplayReport_CompetitorRate" type="DomDecimal" />
+<!-- Card: DisplayReport -->
+<Event name="CardDisplayReport_loadData" action="CardDisplayReport_loadData" />
