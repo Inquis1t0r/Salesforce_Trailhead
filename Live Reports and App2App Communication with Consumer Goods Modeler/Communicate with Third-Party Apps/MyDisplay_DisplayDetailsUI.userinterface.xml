@@ -9,3 +9,12 @@
     </Events>
   </Lookup>
 </Merger>
+<ImageButton name="NavigateTo">
+  <Bindings>
+    <Resource target="Image" type="Image" id="Navigate" defaultImage="Navigate" />
+    <Binding type="Visible" target="Visible" call="ProcessContext::CurrentDisplay.myHasLuCustomer"/>
+  </Bindings>
+  <Events>
+    <ButtonPressedEvent event="NavigateTo" />
+  </Events>
+</ImageButton>
