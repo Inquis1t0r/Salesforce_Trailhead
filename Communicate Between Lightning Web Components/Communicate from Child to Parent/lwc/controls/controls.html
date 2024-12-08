@@ -8,8 +8,15 @@
               onclick={handleSubtract}>
             </lightning-button>
           </lightning-layout-item>
-          <lightning-layout-item flexibility="auto" padding="around-small">
-            <!-- buttons go here -->
+          <lightning-layout-item flexibility="auto" padding="around-small" onbuttonclick={handleMultiply}>
+            <template for:each={factors} for:item="factor">
+              <c-button
+                key={factor}
+                label={factor}
+                data-factor={factor}
+                icon="utility:close">
+              </c-button>
+            </template>
           </lightning-layout-item>
           <lightning-layout-item flexibility="auto" padding="around-small">
             <lightning-button
