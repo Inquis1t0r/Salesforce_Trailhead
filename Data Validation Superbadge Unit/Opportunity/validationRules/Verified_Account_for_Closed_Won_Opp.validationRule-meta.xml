@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Verified_Account_for_Closed_Won_Opp</fullName>
+    <active>true</active>
+    <description>asdgf</description>
+    <errorConditionFormula>AND(
+
+  ISPICKVAL(StageName, &quot;Closed Won&quot;),
+
+  NOT(Account.Verified__c)
+
+)</errorConditionFormula>
+    <errorMessage>Oh snap! Opportunities can only be marked as &quot;Closed Won&quot; for verified accounts.</errorMessage>
+</ValidationRule>

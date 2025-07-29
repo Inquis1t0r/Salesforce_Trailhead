@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Limit_Access_to_Reopen_Closed_Opp</fullName>
+    <active>true</active>
+    <description>asdf</description>
+    <errorConditionFormula>AND(
+
+ISCHANGED(StageName),
+
+ISPICKVAL(PRIORVALUE(StageName), &quot;Closed Won&quot;) || ISPICKVAL(PRIORVALUE(StageName), &quot;Closed Lost&quot;),
+
+NOT( $Permission.Executives_Can_Reopen_Closed_Opportunities )
+
+)</errorConditionFormula>
+    <errorMessage>We hit a snag! Reopening a closed opportunity is not allowed.</errorMessage>
+</ValidationRule>
