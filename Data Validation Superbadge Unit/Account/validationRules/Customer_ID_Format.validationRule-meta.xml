@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Customer_ID_Format</fullName>
+    <active>true</active>
+    <description>Enforces Customer Id Format</description>
+    <errorConditionFormula>AND(
+
+    NOT(ISBLANK(Customer_ID__c)),
+
+    OR(
+
+        LEN(Customer_ID__c) &lt;&gt; 11,
+
+        NOT(REGEX(Customer_ID__c, &quot;^[A-Z]{2}-[0-9]{8}$&quot;)),
+
+        NOT(BEGINS(Customer_ID__c, Billing_Country_Code__c &amp; &quot;-&quot;))
+
+    )
+
+)</errorConditionFormula>
+    <errorDisplayField>Customer_ID__c</errorDisplayField>
+    <errorMessage>Oh snap! Make sure the format is &apos;XX-NNNNNNNN&apos; where X is the 2-character billing country code and N is an 8-digit number.</errorMessage>
+</ValidationRule>
