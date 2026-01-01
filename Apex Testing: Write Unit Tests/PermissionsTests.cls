@@ -35,7 +35,7 @@ private class PermissionsTests {
   @IsTest
   static void testPositivePermissionSet() {
     // Create a test user and assign permission set (setup objects)
-    User testUser = createTestUser('testuser@example.com');
+    User testUser = TestDataFactory.generateUser('Standard User');
     
     // Assign the Private_Object_Access permission set to the test user
     PermissionSet ps = [
@@ -79,29 +79,5 @@ private class PermissionsTests {
         'The retrieved record should match the created record'
       );
     }
-  }
-
-  // Helper method to create a test user
-  private static User createTestUser(String username) {
-    Profile p = [
-      SELECT Id 
-      FROM Profile 
-      WHERE Name = 'Standard User' 
-      LIMIT 1
-    ];
-    
-    User u = new User(
-      Alias = 'testuser',
-      Email = username,
-      EmailEncodingKey = 'UTF-8',
-      LastName = 'Testing',
-      LanguageLocaleKey = 'en_US',
-      LocaleSidKey = 'en_US',
-      ProfileId = p.Id,
-      TimeZoneSidKey = 'America/Los_Angeles',
-      Username = username + System.currentTimeMillis()
-    );
-    insert u;
-    return u;
   }
 }
